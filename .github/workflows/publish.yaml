@@ -1,0 +1,32 @@
+name: Publish Docs to GitHub Pages
+on: 
+  push:
+    branches:
+      - main
+
+env:
+  MDBOOK_V: 0.4.44
+  MB_MERMAID_V: 
+
+
+jobs:
+  docs:
+    name: Documentation
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout sources
+        uses: actions/checkout@v2
+
+      - name: Install mdbook
+        shell: bash
+        run: make install-from-remote
+
+      - name: Build
+        shell: bash
+        run: ./mdbook build
+
+      - name: Deploy Docs
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./target/doc
