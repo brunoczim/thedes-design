@@ -152,71 +152,45 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="thedes---game-specification"><a class="header" href="#thedes---game-specification">Thedes - Game Specification</a></h1>
+                        <h1 id="game-specification"><a class="header" href="#game-specification">Game Specification</a></h1>
 <p>Thedes is a survival game, procedurally generated,
 blending fantasy and politics of prehistoric/ancient societies.</p>
-<p>Important entities:</p>
+<p>In this game, there are a few important entities:</p>
 <ul>
-<li>Mennish</li>
-<li>Player</li>
-<li>Thede</li>
-<li>Thede Limb</li>
-<li>Tongue</li>
-<li>Time</li>
-</ul>
-<h2 id="mennish"><a class="header" href="#mennish">Mennish</a></h2>
-<p>A Mennish is a human being.
-It has the following attributes:</p>
+<li>world</li>
+<li>thedes (peoples)</li>
+<li>mennishes (human beings), which can be:
 <ul>
-<li>health, a <strong>number</strong> from <code>0</code> to <code>K</code></li>
-<li>energy, a <strong>number</strong> from <code>0</code> to <code>K</code></li>
+<li>a player</li>
+<li>thede subjects</li>
+<li>free mennishes, e.g. traders or bandits</li>
 </ul>
-<h2 id="player"><a class="header" href="#player">Player</a></h2>
-<p>The Player is a special Mennish.
-It is indeed the representation of a player's character.
-The Player has the following additional attributes:</p>
-<ul>
-<li>name, a <strong>string</strong>, non-empty</li>
+</li>
+<li>peaceful creatures</li>
+<li>fiends</li>
+<li>time</li>
+<li>no-return doors (portals to another world with no way back)</li>
+<li>combat items</li>
+<li>sorcery items</li>
+<li>blocks</li>
+<li>biomes</li>
 </ul>
-<h2 id="thede"><a class="header" href="#thede">Thede</a></h2>
-<p>A Thede is a political unit where Limbs (Mennishes) belong to a common
-political, ethnic, national identity, and more importantly, respond to the same
-leadership. Thedes have a delimited area. It has the following attributes:</p>
-<ul>
-<li>points under control, a <strong>set of 2D coordinates</strong></li>
-</ul>
-<p>Thedes have the following relationships:</p>
-<ul>
-<li>main tongue, <code>1</code> <strong>Thede</strong> to <code>1</code> <strong>Tongue</strong></li>
-<li>limbs, <code>1</code> <strong>Thede</strong> to <code>K</code> <strong>Thede Limbs</strong></li>
-</ul>
-<h2 id="thede-limb"><a class="header" href="#thede-limb">Thede Limb</a></h2>
-<p>A Thede Limb is a Mennish that belongs to a Thede. Limbs have the following attributes:</p>
-<ul>
-<li>name, a <strong>string</strong>, non-empty</li>
-</ul>
-<p>Limbs have the following relationships:</p>
-<ul>
-<li>thede, <code>K</code> <strong>Thede Limbs</strong> to <code>1</code> <strong>Thede</strong></li>
-</ul>
-<h2 id="tongue"><a class="header" href="#tongue">Tongue</a></h2>
-<p>A tongue is a human language. One tongue belongs to one or more Thedes.</p>
-<h2 id="time"><a class="header" href="#time">Time</a></h2>
-<p>Time in Thedes Game is a discrete counter
-that can be measured through the following ways:</p>
-<ul>
-<li>Linear time of the day</li>
-<li>Part of the day</li>
-<li>Season</li>
-<li>Days since the beginning of the season</li>
-<li>Total days since beginning of the world</li>
-</ul>
+<p>The player is a very special mennish, it is blessed with freedom,
+but cursed with destruction by the gods.
+When a player enters a world,
+the world becomes doomed and will be destroyed in 239 days.</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="00_preface.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
 
+                            <a rel="next prefetch" href="01_game_spec/01_time.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
 
                         <div style="clear: both"></div>
                     </nav>
@@ -224,7 +198,13 @@ that can be measured through the following ways:</p>
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="00_preface.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
 
+                    <a rel="next prefetch" href="01_game_spec/01_time.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
             </nav>
 
         </div>
