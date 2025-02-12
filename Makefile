@@ -16,10 +16,10 @@ MB_MERMAID_PACKAGE = \
 install-from-source: install-mdbook-from-source install-mermaid-from-source
 
 install-mdbook-from-source:
-	cargo install mdbook
+	cargo install -f mdbook
 
 install-mermaid-from-source:
-	cargo install mdbook-mermaid
+	cargo install -f mdbook-mermaid
 	mdbook-mermaid install .
 
 install-from-remote: install-mdbook-from-remote install-mermaid-from-remote
