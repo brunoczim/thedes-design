@@ -4,14 +4,10 @@ on:
     branches:
       - main
 
-env:
-  MDBOOK_V: 0.4.44
-  MB_MERMAID_V: 
-
 
 jobs:
   publish-pages:
-    name: Documentation
+    name: Publish Pages
     runs-on: ubuntu-latest
     steps:
       - name: Checkout sources
@@ -25,7 +21,7 @@ jobs:
         shell: bash
         run: ./mdbook build
 
-      - name: Deploy to GitHub Pages
+      - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
