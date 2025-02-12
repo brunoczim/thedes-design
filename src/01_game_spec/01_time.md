@@ -48,6 +48,32 @@ day to another is not linear.
 Each part of the day might last a different total time.
 In fact, the duration of each part of the day is not constant,
 it depends on the day of the year.
+For each part of the day, the duration is specified for the first day of each
+season.
+For the rest of the days, the durations gradually change, in a linear fashion,
+so that a transition is completed when the next season starts.
+
+The ratios of parts of day' durations at the start of each season are:
+- Ware:
+    - Sunrise: `7/48` (3h30)
+    - Daylight: `17/48` (8h30)
+    - Sunset: `8/48` (4h)
+    - Winter: `16/48` (8h)
+- Summer:
+    - Sunrise: `4/48` (2h)
+    - Daylight: `23/48` (11h30)
+    - Sunset: `10/48` (5h)
+    - Winter: `11/48` (5h30)
+- Harvest:
+    - Sunrise: `8/48` (4h)
+    - Daylight: `16/48` (8h)
+    - Sunset: `7/48` (3h30)
+    - Winter: `17/48` (8h30)
+- Winter:
+    - Sunrise: `9/48` (4h30)
+    - Daylight: `10/48` (5h)
+    - Sunset: `4/48` (2h)
+    - Winter: `25/48` (12h30)
 
 ## Cycle: Part of the Day
 
