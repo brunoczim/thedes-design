@@ -11,10 +11,14 @@ Time flows tick-by-tick in Thedes. It can be understood by views:
 - Lunar phase
 - Month
 
+## End of the World
+
 After the player enters in a world, such world will end in 270 days
 and the player will die with it, unless the player jumps into a no-return door.
 If the door is crossed, the player enters in a new world reseting the counter,
 being able to bring only the items in the player's inventory.
+
+## Lunar Phases
 
 There are eight lunar phases:
 - New (first phase)
@@ -31,20 +35,25 @@ A month starts at the day whose lunar phase is "new",
 and ends at the day whose lunar phase is "waxing crescent";
 thus, a month lasts 8 days.
 
-Also, there are four seasons:
+## Seasons
+
+There are four seasons:
 - Ware (14 days, first season)
 - Summer (13 days)
 - Harvest (14 days)
 - Winter (13 days)
 
-And there are four parts of the day:
+## Parts of the Day
+
+There are four parts of the day:
 - Sunrise (first part)
 - Daylight
 - Sunset
 - Night
 
-Intra-day, there is a linear time progression, but shifts from one part of the
-day to another is not linear.
+### Progression
+
+Intra-day, shifts from one part of the day to another are not linear.
 Each part of the day might last a different total time.
 In fact, the duration of each part of the day is not constant,
 it depends on the day of the year.
@@ -53,7 +62,7 @@ season.
 For the rest of the days, the durations gradually change, in a linear fashion,
 so that a transition is completed when the next season starts.
 
-The ratios of parts of day' durations at the start of each season are:
+The ratios of parts of day's durations at the start of each season are:
 - Ware:
     - Sunrise: `7/48` (3h30)
     - Daylight: `17/48` (8h30)
