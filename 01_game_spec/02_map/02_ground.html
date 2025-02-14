@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Time - thedes-design</title>
+        <title>Ground - thedes-design</title>
 
 
         <!-- Custom HTML head -->
@@ -12,32 +12,32 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff">
 
-        <link rel="icon" href="../favicon.svg">
-        <link rel="shortcut icon" href="../favicon.png">
-        <link rel="stylesheet" href="../css/variables.css">
-        <link rel="stylesheet" href="../css/general.css">
-        <link rel="stylesheet" href="../css/chrome.css">
-        <link rel="stylesheet" href="../css/print.css" media="print">
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
-        <link rel="stylesheet" href="../fonts/fonts.css">
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
 
         <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" href="../highlight.css">
-        <link rel="stylesheet" href="../tomorrow-night.css">
-        <link rel="stylesheet" href="../ayu-highlight.css">
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
 
 
         <!-- Provide site root to javascript -->
         <script>
-            var path_to_root = "../";
+            var path_to_root = "../../";
             var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../toc.js"></script>
+        <script src="../../toc.js"></script>
     </head>
     <body>
     <div id="body-container">
@@ -89,7 +89,7 @@
             <!-- populated by js -->
             <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
             <noscript>
-                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+                <iframe class="sidebar-iframe-outer" src="../../toc.html"></iframe>
             </noscript>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
@@ -123,7 +123,7 @@
                     <h1 class="menu-title">thedes-design</h1>
 
                     <div class="right-buttons">
-                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
                         </a>
 
@@ -152,112 +152,25 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="time"><a class="header" href="#time">Time</a></h1>
-<p>Time flows tick-by-tick in Thedes. It can be understood by views:</p>
+                        <h1 id="ground"><a class="header" href="#ground">Ground</a></h1>
+<p>Each tile has a specific ground,
+which is generated according to the biome of the tile.
+Unlike the biome, the ground of a tile can be changed.
+The valid grounds are:</p>
 <ul>
-<li>Linear time of the day</li>
-<li>Part of the day</li>
-<li>Day within the current season</li>
-<li>Season</li>
-<li>Day within the current year</li>
-<li>Year</li>
-<li>Days since the player entered the world</li>
-<li>Lunar phase</li>
-<li>Month</li>
-</ul>
-<h2 id="end-of-the-world"><a class="header" href="#end-of-the-world">End of the World</a></h2>
-<p>After the player enters in a world, such world will end in 270 days
-and the player will die with it, unless the player jumps into a no-return door.
-If the door is crossed, the player enters in a new world reseting the counter,
-being able to bring only the items in the player's inventory.</p>
-<h2 id="lunar-phases"><a class="header" href="#lunar-phases">Lunar Phases</a></h2>
-<p>There are eight lunar phases:</p>
-<ul>
-<li>New (first phase)</li>
-<li>Waxing crescent</li>
-<li>First quarter</li>
-<li>Waxing gibbous</li>
-<li>Full</li>
-<li>Waning gibbous</li>
-<li>Last quarter</li>
-<li>Waning crescent</li>
-</ul>
-<p>Each lunar phase lasts only one day.
-A month starts at the day whose lunar phase is "new",
-and ends at the day whose lunar phase is "waxing crescent";
-thus, a month lasts 8 days.</p>
-<h2 id="seasons"><a class="header" href="#seasons">Seasons</a></h2>
-<p>There are four seasons:</p>
-<ul>
-<li>Ware (14 days, first season)</li>
-<li>Summer (13 days)</li>
-<li>Harvest (14 days)</li>
-<li>Winter (13 days)</li>
-</ul>
-<h2 id="parts-of-the-day"><a class="header" href="#parts-of-the-day">Parts of the Day</a></h2>
-<p>There are four parts of the day:</p>
-<ul>
-<li>Sunrise (first part)</li>
-<li>Daylight</li>
-<li>Sunset</li>
-<li>Night</li>
-</ul>
-<h3 id="progression"><a class="header" href="#progression">Progression</a></h3>
-<p>Intra-day, shifts from one part of the day to another are not linear.
-Each part of the day might last a different total time.
-In fact, the duration of each part of the day is not constant,
-it depends on the day of the year.
-For each part of the day, the duration is specified for the first day of each
-season.
-For the rest of the days, the durations gradually change, in a linear fashion,
-so that a transition is completed when the next season starts.</p>
-<p>The ratios of parts of day's durations at the start of each season are:</p>
-<ul>
-<li>Ware:
-<ul>
-<li>Sunrise: <code>7/48</code> (3h30)</li>
-<li>Daylight: <code>17/48</code> (8h30)</li>
-<li>Sunset: <code>8/48</code> (4h)</li>
-<li>Winter: <code>16/48</code> (8h)</li>
-</ul>
-</li>
-<li>Summer:
-<ul>
-<li>Sunrise: <code>4/48</code> (2h)</li>
-<li>Daylight: <code>23/48</code> (11h30)</li>
-<li>Sunset: <code>10/48</code> (5h)</li>
-<li>Winter: <code>11/48</code> (5h30)</li>
-</ul>
-</li>
-<li>Harvest:
-<ul>
-<li>Sunrise: <code>8/48</code> (4h)</li>
-<li>Daylight: <code>16/48</code> (8h)</li>
-<li>Sunset: <code>7/48</code> (3h30)</li>
-<li>Winter: <code>17/48</code> (8h30)</li>
-</ul>
-</li>
-<li>Winter:
-<ul>
-<li>Sunrise: <code>9/48</code> (4h30)</li>
-<li>Daylight: <code>10/48</code> (5h)</li>
-<li>Sunset: <code>4/48</code> (2h)</li>
-<li>Winter: <code>25/48</code> (12h30)</li>
-</ul>
-</li>
+<li>Grass (from plains biome)</li>
+<li>Sand (from desert biome)</li>
+<li>Stone (from wasteland biome)</li>
 </ul>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../01_game_spec.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../../01_game_spec/02_map/01_biome.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next prefetch" href="../01_game_spec/02_map.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                                <i class="fa fa-angle-right"></i>
-                            </a>
 
                         <div style="clear: both"></div>
                     </nav>
@@ -265,13 +178,10 @@ so that a transition is completed when the next season starts.</p>
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../01_game_spec.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../../01_game_spec/02_map/01_biome.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next prefetch" href="../01_game_spec/02_map.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                        <i class="fa fa-angle-right"></i>
-                    </a>
             </nav>
 
         </div>
@@ -284,17 +194,17 @@ so that a transition is completed when the next season starts.</p>
         </script>
 
 
-        <script src="../elasticlunr.min.js"></script>
-        <script src="../mark.min.js"></script>
-        <script src="../searcher.js"></script>
+        <script src="../../elasticlunr.min.js"></script>
+        <script src="../../mark.min.js"></script>
+        <script src="../../searcher.js"></script>
 
-        <script src="../clipboard.min.js"></script>
-        <script src="../highlight.js"></script>
-        <script src="../book.js"></script>
+        <script src="../../clipboard.min.js"></script>
+        <script src="../../highlight.js"></script>
+        <script src="../../book.js"></script>
 
         <!-- Custom JS scripts -->
-        <script src="../mermaid.min.js"></script>
-        <script src="../mermaid-init.js"></script>
+        <script src="../../mermaid.min.js"></script>
+        <script src="../../mermaid-init.js"></script>
 
 
     </div>
