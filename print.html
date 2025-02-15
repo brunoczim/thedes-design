@@ -307,6 +307,24 @@ The valid grounds are:</p>
 <li>Sand (from desert biome)</li>
 <li>Stone (from wasteland biome)</li>
 </ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="blockitem"><a class="header" href="#blockitem">Block/Item</a></h1>
+<p>Each tile has a specific block placed.
+"Air" is a special block, acting as an "empty" block,
+and the only one that can be "moved around":
+any block in movement can "cross" air.</p>
+<p>Some blocks have correspondencies to other types of entity:</p>
+<ul>
+<li>Items: some items can be placed over the ground (in the block layer).</li>
+<li>Living entities:
+living entities have physical representation in the map as blocks.</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="thede-land-claim"><a class="header" href="#thede-land-claim">Thede Land Claim</a></h1>
+<p>A map has a layer keepping track of what thede a tile belongs to;
+or to no thede.
+When a thede is generated,
+all tiles belonging to the thede are claimed at this layer.</p>
+<p>Thedes can expand their territory, either pacifically or through war.
+In this case, more tiles will be claimed.</p>
 
                     </main>
 

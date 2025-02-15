@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Ground - thedes-design</title>
+        <title>Block/Item - thedes-design</title>
 
 
         <!-- Custom HTML head -->
@@ -152,26 +152,27 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="ground"><a class="header" href="#ground">Ground</a></h1>
-<p>Each tile has a specific ground,
-which is generated according to the biome of the tile.
-Unlike the biome, the ground of a tile can be changed.
-The valid grounds are:</p>
+                        <h1 id="blockitem"><a class="header" href="#blockitem">Block/Item</a></h1>
+<p>Each tile has a specific block placed.
+"Air" is a special block, acting as an "empty" block,
+and the only one that can be "moved around":
+any block in movement can "cross" air.</p>
+<p>Some blocks have correspondencies to other types of entity:</p>
 <ul>
-<li>Grass (from plains biome)</li>
-<li>Sand (from desert biome)</li>
-<li>Stone (from wasteland biome)</li>
+<li>Items: some items can be placed over the ground (in the block layer).</li>
+<li>Living entities:
+living entities have physical representation in the map as blocks.</li>
 </ul>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../../01_game_spec/02_map/01_biome.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../../01_game_spec/02_map/02_ground.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next prefetch" href="../../01_game_spec/02_map/03_block_item.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../../01_game_spec/02_map/04_thede_land_claim.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -181,11 +182,11 @@ The valid grounds are:</p>
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../../01_game_spec/02_map/01_biome.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../../01_game_spec/02_map/02_ground.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next prefetch" href="../../01_game_spec/02_map/03_block_item.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../../01_game_spec/02_map/04_thede_land_claim.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
