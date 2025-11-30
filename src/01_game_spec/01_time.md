@@ -1,15 +1,15 @@
 # Time
 
 Time flows tick-by-tick in Thedes. It can be understood by views:
-- Linear time of the day
-- Part of the day
-- Day within the current season
-- Season
-- Day within the current year
-- Year
-- Days since the player entered the world
-- Lunar phase
-- Month
+- linear time of the day
+- part of the day
+- day within the current season
+- season
+- day within the current year
+- year
+- days since the player entered the world
+- lunar phase
+- month
 
 ## End of the World
 
@@ -21,14 +21,14 @@ being able to bring only the items in the player's inventory.
 ## Lunar Phases
 
 There are eight lunar phases:
-- New (first phase)
-- Waxing crescent
-- First quarter
-- Waxing gibbous
-- Full
-- Waning gibbous
-- Last quarter
-- Waning crescent
+- new (first phase)
+- waxing crescent
+- first quarter
+- waxing gibbous
+- full
+- waning gibbous
+- last quarter
+- waning crescent
 
 Each lunar phase lasts only one day.
 A month starts at the day whose lunar phase is "new",
@@ -38,18 +38,18 @@ thus, a month lasts 8 days.
 ## Seasons
 
 There are four seasons:
-- Ware (14 days, first season)
-- Summer (13 days)
-- Harvest (14 days)
-- Winter (13 days)
+- ware (14 days, first season)
+- summer (13 days)
+- harvest (14 days)
+- winter (13 days)
 
 ## Parts of the Day
 
 There are four parts of the day:
-- Sunrise (first part)
-- Daylight
-- Sunset
-- Night
+- sunrise (first part)
+- daylight
+- sunset
+- night
 
 ### Progression
 
@@ -63,23 +63,23 @@ For the rest of the days, the durations gradually change, in a linear fashion,
 so that a transition is completed when the next season starts.
 
 The ratios of parts of day's durations at the start of each season are:
-- Ware:
-    - Sunrise: `7/48` (3h30)
-    - Daylight: `17/48` (8h30)
-    - Sunset: `8/48` (4h)
-    - Winter: `16/48` (8h)
-- Summer:
-    - Sunrise: `4/48` (2h)
-    - Daylight: `23/48` (11h30)
-    - Sunset: `10/48` (5h)
-    - Winter: `11/48` (5h30)
-- Harvest:
-    - Sunrise: `8/48` (4h)
-    - Daylight: `16/48` (8h)
-    - Sunset: `7/48` (3h30)
-    - Winter: `17/48` (8h30)
-- Winter:
-    - Sunrise: `9/48` (4h30)
-    - Daylight: `10/48` (5h)
-    - Sunset: `4/48` (2h)
-    - Winter: `25/48` (12h30)
+- ware:
+    - sunrise: `7/48` (3h30)
+    - daylight: `17/48` (8h30)
+    - sunset: `8/48` (4h)
+    - night: `16/48` (8h)
+- summer:
+    - sunrise: `4/48` (2h)
+    - daylight: `23/48` (11h30)
+    - sunset: `10/48` (5h)
+    - night: `11/48` (5h30)
+- harvest:
+    - sunrise: `8/48` (4h)
+    - daylight: `16/48` (8h)
+    - sunset: `7/48` (3h30)
+    - night: `17/48` (8h30)
+- winter:
+    - sunrise: `9/48` (4h30)
+    - daylight: `10/48` (5h)
+    - sunset: `4/48` (2h)
+    - night: `25/48` (12h30)
